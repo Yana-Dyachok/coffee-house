@@ -8,6 +8,7 @@ Coffee House is a project where you will need to create a website consisting of 
 - Using JavaScript to implement the functionality specified in the task.
 
 [Design in Figma](https://www.figma.com/file/SAoBmuOqTfguehdT4IFRxQ/Coffee-House?type=design&node-id=264-8864&mode=design&t=9T2tJBPmRRFnNnv6-0)
+
 [Prototype in Figma](https://www.figma.com/proto/SAoBmuOqTfguehdT4IFRxQ/Coffee-House?page-id=0%3A1&type=design&node-id=216-1349&viewport=875%2C385%2C0.03&t=rqlxorgzq8m3fnhO-1&scaling=min-zoom&starting-point-node-id=216%3A1349)
 
 ## Project Work Stages
