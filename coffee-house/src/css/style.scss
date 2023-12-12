@@ -52,7 +52,7 @@ $darkBorder: #665f55;
     border-radius: 6.25rem;
     border: none;
     transition: all 0.4s ease-out;
-    @media (hover: hover) {
+    @media (hover: hover) and (pointer: fine) and (pointer: fine) {
         &:hover {
             transform: scale(1.05);
             cursor: pointer;
@@ -75,7 +75,7 @@ $darkBorder: #665f55;
     object-fit: cover;
     transform: scale(1.1);
 
-    @media (hover: hover) {
+    @media (hover: hover) and (pointer: fine) and (pointer: fine) {
         &:hover {
             transform: scale(1);
         }
@@ -94,7 +94,7 @@ $darkBorder: #665f55;
         transition: all 0.4s ease-in;
         transform: translateX(-50%);
     }
-    @media (hover: hover) {
+    @media (hover: hover) and (pointer: fine) {
         &:hover::before {
             width: 100%;
         }
@@ -102,7 +102,7 @@ $darkBorder: #665f55;
 }
 
 %hover-cards {
-    @media (hover: hover) {
+    @media (hover: hover) and (pointer: fine) {
         &:hover {
             color: $accent;
             text-shadow: 0.0125rem 0.0125rem 0.0625rem $dark;
@@ -138,7 +138,7 @@ $darkBorder: #665f55;
     & > .circle {
         background-color: $lightext;
         transform: none;
-        @media (hover: hover) {
+        @media (hover: hover) and (pointer: fine) {
             &:hover {
                 filter: none;
                 cursor: default;
@@ -207,7 +207,7 @@ li {
 
 .header-logo-link {
     padding: 1.25rem 0rem 0rem 2.5rem;
-    @media (hover: hover) {
+    @media (hover: hover) and (pointer: fine) {
         &:hover:not(.menu-logo) {
             transform: scale(1.1);
         }
@@ -308,7 +308,7 @@ li {
         }
 
         &.active::before {
-            top: 52%;
+            top: 50%;
             transform: rotate(-45deg) translate(0, -50%);
         }
 
@@ -388,23 +388,34 @@ li {
 //enjoy block---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #enjoy {
-    min-height: 40.2rem;
-    margin: 0 2.5rem;
-    background: url(../assets/main-img/img-hero.jpg) center no-repeat;
-    background-size: cover;
-    border-radius: 2.5rem;
+    padding: 0 5rem;
 }
 
 .enjoy-block {
-    width: 50%;
+    position: relative;
+    width: 1360px;
+    height: 644px;
+    overflow: hidden;
+    border-radius: 2.5rem;
+}
+
+#coffee-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2.5rem;
+    z-index: -1;
+}
+
+.enjoy-text-block {
+    position: absolute;
+    width: 43%;
     height: 100%;
     float: left;
     padding: 6.25rem 0rem 0rem 6.25rem;
-    box-sizing: border-box;
-
-    &:nth-child(3) {
-        margin-right: 0;
-    }
 }
 
 .titles {
@@ -458,7 +469,7 @@ li {
         padding-left: 2rem;
     }
 
-    @media (hover: hover) {
+    @media (hover: hover) and (pointer: fine) {
         &:hover {
             & > p {
                 padding-right: 0.2rem;
@@ -475,60 +486,32 @@ li {
 }
 
 @media screen and (max-width: 1400px) {
-    #enjoy {
-        width: 87%;
-        margin-left: 5rem;
+    .enjoy-block {
+        width: 98%;
     }
 
-    .enjoy-block {
+    .enjoy-text-block {
         width: 70%;
     }
 }
 
-@media screen and (max-width: 1250px) {
-    #enjoy {
-        width: 88%;
-        margin: 0rem 4rem;
-    }
-}
-
-@media screen and (max-width: 1050px) {
-    #enjoy {
-        width: 90%;
-        margin: 0rem 3rem;
-    }
-
-    .enjoy-block {
-        width: 90%;
-    }
-}
-
 @media screen and (max-width: 970px) {
-    #enjoy {
-        width: 95%;
-        margin: 0rem 2rem;
+    .enjoy-block {
+        width: 100%;
     }
-}
-
-@media screen and (max-width: 850px) {
-    #enjoy {
-        width: 93%;
-        margin-left: 0rem 1rem;
-    }
-
-    .subtitle-enjoy {
-        padding: 1rem 2rem 1.5rem 0.025rem;
+    .enjoy-text-block {
+        width: 85%;
+        padding-left: 2rem;
     }
 }
 
 @media screen and (max-width: 768px) {
     #enjoy {
-        width: 89.6%;
-        margin-left: 2.5rem;
+        padding: 0 2.5rem;
     }
 
-    .enjoy-block {
-        padding: 6.25rem 0rem 0rem 3.7rem;
+    .enjoy-text-block {
+        padding-left: 3.8rem;
     }
 
     .subtitle-enjoy {
@@ -557,46 +540,52 @@ li {
 
 @media screen and (max-width: 660px) {
     #enjoy {
-        max-width: 75%;
-        margin-left: 6rem;
+        padding: 0rem 0rem 0 9rem;
+    }
+
+    .enjoy-block {
+        max-width: 80%;
     }
 }
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 560px) {
     #enjoy {
-        max-width: 65%;
-        margin-left: 8.5rem;
+        padding-left: 10rem;
+    }
+
+    .enjoy-block {
+        max-width: 74%;
+    }
+
+    .enjoy-text-block {
+        padding-left: 1rem;
     }
 }
 
 @media screen and (max-width: 500px) {
     #enjoy {
-        max-width: 55%;
-        margin-left: 10.5rem;
+        padding-left: 14rem;
     }
-}
 
-@media screen and (max-width: 420px) {
-    #enjoy {
-        max-width: 48%;
-        margin-left: 12rem;
-    }
     .enjoy-block {
-        padding: 3rem 0rem 0rem 1.7rem;
+        width: 370px;
     }
 }
 
 @media screen and (max-width: 380px) {
     #enjoy {
-        max-width: 100%;
-        width: 348px;
-        min-height: 34.5rem;
-        margin-left: 2rem;
+        padding-left: 6.3rem;
     }
 
     .enjoy-block {
+        width: 433px;
+        height: 552px;
+        padding: 0rem 0rem 0rem 1rem;
+    }
+
+    .enjoy-text-block {
         width: 100%;
-        padding: 3.7rem 0rem 0rem 1rem;
+        padding: 3.7rem 0rem 0rem;
     }
 
     .title-enjoy {
@@ -604,11 +593,14 @@ li {
     }
 
     .subtitle-enjoy {
-        padding: 2.45rem 1rem 2.5rem 0.025rem;
+        padding: 2.45rem 1.5rem 2.5rem 0.025rem;
     }
 }
 
 //favourites-coffee-------------------------------------------------------------------------------------------------------------------------------------------
+#favourites-coffee {
+    padding: 0 2.5rem;
+}
 
 .title-favourites {
     padding: 6.25rem 0rem 2.5rem 0rem;
@@ -660,7 +652,7 @@ li {
 
 .prev-btn {
     background: url(../assets/icons/arrow-left.png) center no-repeat;
-    @media (hover: hover) {
+    @media (hover: hover) and (pointer: fine) {
         &:hover {
             background: url(../assets/icons/arrow-left-hover.png) center
                 no-repeat $darkBorder;
@@ -670,7 +662,7 @@ li {
 
 .next-btn {
     background: url(../assets/icons/arrow-right.png) center no-repeat;
-    @media (hover: hover) {
+    @media (hover: hover) and (pointer: fine) {
         &:hover {
             background: url(../assets/icons/arrow-right-hover..png) center
                 no-repeat $darkBorder;
@@ -682,7 +674,7 @@ li {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 2.5rem 0rem 6.25rem 0.8rem;
+    padding: 2.35rem 0rem 6.35rem 1rem;
 }
 
 .indicator {
@@ -691,16 +683,14 @@ li {
     margin-right: 0.75rem;
     border-radius: 6.25rem;
     background-color: $lightBorder;
-    cursor: pointer;
-    @media (hover: hover) {
-        &:hover {
-            background-color: $accent;
-        }
-    }
+    overflow: hidden;
 }
 
-.active-indicator {
-    background-color: $dark;
+.progress {
+    height: 100%;
+    background-color: $darkBorder;
+    border-radius:  6.25rem;
+    transition: ease-in-out 0.5s;
 }
 
 @media screen and (max-width: 1430px) {
@@ -716,8 +706,13 @@ li {
 }
 
 @media screen and (max-width: 768px) {
+    .title-favourites {
+        padding: 6.25rem 0rem 2.5rem;
+    }
+
     .slider-block {
-        padding: 0rem;
+        justify-content: space-between;
+        padding: 0;
     }
 }
 
@@ -740,9 +735,14 @@ li {
 }
 
 @media screen and (max-width: 380px) {
+    #favourites-coffee {
+        padding: 0 4rem;
+    }
+
     .slider-container {
         width: 22rem;
         height: 35rem;
+        padding-left: 2rem;
     }
 
     .slider {
@@ -774,15 +774,18 @@ li {
     }
 
     .slider-subtitle {
-        padding: 0rem 0rem 0.15rem;
+        padding: 0rem 2rem 0.15rem;
     }
 
     .indicators-block {
-        padding: 0.68rem 0rem 2rem 0.8rem;
+        padding: 0.65rem 0rem 2rem 0.8rem;
     }
 }
 
 //about------------------------------------------------------------------------------------------------------------
+#about {
+    padding: 0 2.5rem;
+}
 
 .title-about {
     text-align: left;
@@ -840,7 +843,7 @@ li {
 
 @media screen and (max-width: 768px) {
     .title-about {
-        padding: 0rem 2.5rem;
+        padding: 0rem;
     }
 
     .each-img-block {
@@ -887,7 +890,7 @@ li {
 
 @media screen and (max-width: 380px) {
     .title-about {
-        padding: 4.3rem 2rem 0rem;
+        padding: 4.3rem 3.8rem 0rem;
     }
 
     .img-about {
@@ -901,7 +904,7 @@ li {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding-bottom: 5.85rem;
+    padding: 0 0 5.85rem;
 }
 
 .text-block-app {
@@ -931,7 +934,7 @@ li {
 .apple-load {
     background: url(../assets/icons/apple-dark.png) no-repeat;
     background-position: left 1.45rem bottom 1rem;
-    @media (hover: hover) {
+    @media (hover: hover) and (pointer: fine) {
         &:hover {
             color: $lightext;
             background: url(../assets/icons/apple.png) no-repeat $darkBorder;
@@ -944,7 +947,7 @@ li {
     background: url(../assets/icons/google.png) no-repeat;
     background-position: left 1.45rem bottom 1rem;
     margin-left: 1.1rem;
-    @media (hover: hover) {
+    @media (hover: hover) and (pointer: fine) {
         &:hover {
             color: $lightext;
             background: url(../assets/icons/google-hover.png) no-repeat
@@ -968,43 +971,6 @@ li {
 
 .last-google-subtitle {
     padding-left: 1rem;
-}
-
-.icon-contacts {
-    @include roundButtons(3.75rem, 3.75rem);
-    border: 0.0625rem solid $lightBorder;
-    background-color: inherit;
-}
-
-.twiter {
-    background: url(../assets/icons/twiter.png) center no-repeat;
-    @media (hover: hover) {
-        &:hover {
-            background: url(../assets/icons/twiter-hover.png) center no-repeat
-                $lightext;
-        }
-    }
-}
-
-.instagram {
-    background: url(../assets/icons/instagram.png) center no-repeat;
-    @media (hover: hover) {
-        &:hover {
-            background: url(../assets/icons/instagram-hover.png) center
-                no-repeat $lightext;
-        }
-    }
-}
-
-.facebook {
-    background: url(../assets/icons/facebook.png) center no-repeat;
-    @media (hover: hover) {
-        &:hover {
-            color: $dark;
-            background: url(../assets/icons/facebook-hover.png) center no-repeat
-                $lightext;
-        }
-    }
 }
 
 .img-app {
@@ -1065,11 +1031,15 @@ li {
 
 @media screen and (max-width: 710px) {
     .text-block-app {
-        padding: 0rem 3rem;
+        padding: 0rem 5rem;
     }
 
     .download-block {
         flex-wrap: wrap;
+    }
+
+    .apple-load {
+        margin: 0rem 2rem 2rem 0rem;
     }
 
     .img-mobile-app {
@@ -1087,24 +1057,20 @@ li {
         margin: 0rem 4rem;
     }
 
-    .apple-load {
-        margin: 0rem 0rem 2rem;
-    }
-
     .google-load {
         margin: 0rem;
     }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 530px) {
     .text-block-app {
-        padding: 0rem 10rem;
+        padding: 0rem 12rem;
     }
 }
 
 @media screen and (max-width: 380px) {
     .text-block-app {
-        padding: 0rem 0rem 0rem 1rem;
+        padding: 0rem 5.3rem;
     }
 
     .title-app {
@@ -1206,6 +1172,43 @@ li {
 
 .logo-contacts {
     padding-right: 0.5rem;
+}
+
+.icon-contacts {
+    @include roundButtons(3.75rem, 3.75rem);
+    border: 0.0625rem solid $lightBorder;
+    background-color: inherit;
+}
+
+.twiter {
+    background: url(../assets/icons/twiter.png) center no-repeat;
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            background: url(../assets/icons/twiter-hover.png) center no-repeat
+                $lightext;
+        }
+    }
+}
+
+.instagram {
+    background: url(../assets/icons/instagram.png) center no-repeat;
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            background: url(../assets/icons/instagram-hover.png) center
+                no-repeat $lightext;
+        }
+    }
+}
+
+.facebook {
+    background: url(../assets/icons/facebook.png) center no-repeat;
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            color: $dark;
+            background: url(../assets/icons/facebook-hover.png) center no-repeat
+                $lightext;
+        }
+    }
 }
 
 @media screen and (max-width: 1400px) {
@@ -1327,7 +1330,7 @@ li {
     & > .circle {
         @include roundButtons(1.875rem, 1.875rem);
     }
-    @media (hover: hover) {
+    @media (hover: hover) and (pointer: fine) {
         &:hover {
             color: $lightext;
             background-color: $darkBorder;
@@ -1401,7 +1404,7 @@ li {
     border: 0.0625rem solid $lightBorder;
     border-radius: 2.5rem;
     cursor: pointer;
-    @media (hover: hover) {
+    @media (hover: hover) and (pointer: fine) {
         &:hover {
             box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem $dark;
 
@@ -1449,8 +1452,7 @@ li {
 }
 
 .loading-btn {
-    display: none; //temporary----------------------------------------------------------
-    margin: 0.1rem 22.5rem 6.25rem;
+    margin: 0.1rem 0rem 6.25rem 22rem;
     @include roundButtons(3.62rem, 3.62rem);
     background: url(../assets/icons/refresh.png) center no-repeat;
     border: 0.0625rem solid $darkBorder;
@@ -1482,25 +1484,6 @@ li {
     }
 }
 
-// @media screen and (max-width: 768px) {
-//   .title-menu {
-//     padding: 0rem 3rem;
-//   }
-
-//   .tabs {
-//     padding: 2.4rem 0rem 2.05rem;
-//   }
-
-//   .menu-block {
-//     justify-content: space-around;
-//     padding: 0rem 2.6rem 0rem 2.55rem;
-//   }
-
-//   .card-block:nth-child(2) {
-//     margin-bottom: 2.415rem;
-//   }
-// }
-
 @media screen and (max-width: 768px) {
     .title-menu {
         padding: 0rem 3rem;
@@ -1518,21 +1501,6 @@ li {
     .card-block:nth-child(2) {
         margin-bottom: 2.415rem;
     }
-    // temporary----------------------------------------
-    .menu-block {
-        & .card-block:nth-last-child(-n + 4) {
-            display: none;
-        }
-
-        & .card-block:nth-child(-n + 4) {
-            display: block;
-        }
-    }
-
-    .loading-btn {
-        display: block;
-    }
-    // temporary----------------------------------------
 }
 
 @media screen and (max-width: 700px) {
@@ -1543,11 +1511,15 @@ li {
     .menu-block {
         padding: 0rem 8.5rem;
     }
+
+    .loading-btn {
+        margin: 0.1rem 0rem 6.25rem 18rem;
+    }
 }
 
 @media screen and (max-width: 405px) {
     .title-menu {
-        padding: 0.05rem 14rem 0rem;
+        padding: 0.05rem 6rem 0rem;
     }
 
     .tabs {
@@ -1571,7 +1543,7 @@ li {
     }
 
     .loading-btn {
-        margin: 0.05rem 22.5rem 6.25rem;
+        margin: 0.1rem 0rem 6.25rem 15rem;
     }
 }
 
@@ -1788,7 +1760,7 @@ li {
     align-items: center;
     border: 0.0625rem solid $darkBorder;
     background-color: inherit;
-    @media (hover: hover) {
+    @media (hover: hover) and (pointer: fine) {
         &:hover {
             color: $lightext;
             background-color: $darkBorder;

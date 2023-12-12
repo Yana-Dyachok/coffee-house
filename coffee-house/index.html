@@ -41,7 +41,7 @@
                             <a class="nav-link" href="#footer">Contact us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="./src/menu.html" target="_blank">
+                            <a class="nav-link menu-link" href="./src/menu.html">
                                 <p class="header-coffee">Menu</p>
                                 <div>
                                     <img  class="img-nav-coffee" src="./src/assets/icons/coffee-cup.png" alt="coffee-cup" width="20" height="20">
@@ -55,26 +55,28 @@
         <main>
             <section id="enjoy">
                 <div class="enjoy-block">
-                    <!-- <video src="https://www.pexels.com/ru-ru/video/2909914/"></video> -->
-                    <div class="enjoy-text-block">
-                        <h1 class="title-enjoy titles">
-                            <span class="title-span">Enjoy</span> premium coffee at our charming cafe
-                        </h1>
-                        <p class="subtitle-enjoy">
-                            With its inviting atmosphere and delicious coffee
-                            options, the Coffee House Resource is a popular
-                            destination for coffee lovers and those seeking a warm
-                            and inviting space to enjoy their favorite beverage.
-                        </p>
-                        <a href="./src/menu.html" target="_blank">
-                            <div class="btn-menu">
-                              <p>Menu</p>
-                              <span>
-                                <img class="btn-img" src="./src/assets/icons/coffee-cup-btn.png" alt="cup">
-                              </span>
-                            </div>
-                        </a>
-                    </div>
+                    <video autoplay muted loop id="coffee-video">
+                        <source src="./src/assets/video-coffee.mp4" type="video/mp4">
+                      </video>
+                      <div class="enjoy-text-block">
+                          <h1 class="title-enjoy titles">
+                              <span class="title-span">Enjoy</span> premium coffee at our charming cafe
+                          </h1>
+                          <p class="subtitle-enjoy">
+                              With its inviting atmosphere and delicious coffee
+                              options, the Coffee House Resource is a popular
+                              destination for coffee lovers and those seeking a warm
+                              and inviting space to enjoy their favorite beverage.
+                          </p>
+                          <a href="./src/menu.html">
+                              <div class="btn-menu">
+                                  <p>Menu</p>
+                                  <span>
+                                    <img class="btn-img" src="./src/assets/icons/coffee-cup-btn.png" alt="cup">
+                                  </span>
+                              </div>
+                          </a>
+                      </div>
                 </div>
             </section>
             <section id="favourites-coffee">
@@ -133,9 +135,15 @@
                     <button class="arrow-button next-btn"></button>
                 </div>
                 <ul class="indicators-block">
-                    <li class="indicator active-indicator"></li>
-                    <li class="indicator"></li>
-                    <li class="indicator"></li>
+                    <li class="indicator">
+                        <div class="progress" style="width: 0"></div>
+                    </li>
+                    <li class="indicator">
+                        <div class="progress" style="width: 0"></div>
+                    </li>
+                    <li class="indicator">
+                        <div class="progress" style="width: 0"></div>
+                    </li>
                 </ul>
             </section>
             <section id="about">
