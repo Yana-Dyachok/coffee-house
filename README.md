@@ -26,3 +26,4 @@ The task consists of three parts:
   - The implemented functionality is being checked.
   
 #### [Click](https://yana-dyachok.github.io/coffee-house/coffee-house/) to see my work!
+![coffee](https://github.com/Yana-Dyachok/coffee-house/assets/97878430/215bac46-6251-4f4b-ba12-5beb8c84c95f)
