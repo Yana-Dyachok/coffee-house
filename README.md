@@ -24,3 +24,5 @@ The task consists of three parts:
 - [Coffee-House. Week-3: Adding Functionality](https://github.com/rolling-scopes-school/tasks/blob/master/tasks/coffee-house/coffee-house-week3.md)
   - In this part of the task, we use JavaScript to add interactivity to the pages;
   - The implemented functionality is being checked.
+  
+#### [Click](https://yana-dyachok.github.io/coffee-house/coffee-house/) to see my work!
