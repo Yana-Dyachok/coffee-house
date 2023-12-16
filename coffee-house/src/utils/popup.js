@@ -61,37 +61,6 @@ function updatePriceInformation(cardPrice) {
   totalPrice = firstPrice;
 }
 
-
-// async function getCardInfo(cardIndex) {
-//   const res = await fetch("./utils/products.json");
-//   const data = await res.json();
-//   const card = data[cardIndex];
-//   imgPopup.innerHTML = `<img class="img-popup" src=${card.img} width=310 height=310>`;
-//   modalName.textContent = card.name;
-//   modalDescription.textContent = card.description;
-//   sizePrice = [
-//     card.sizes.s["add-price"],
-//     card.sizes.m["add-price"],
-//     card.sizes.l["add-price"],
-//   ];
-//   additivesPrice = [
-//     card.additives[0]["add-price"],
-//     card.additives[1]["add-price"],
-//     card.additives[2]["add-price"],
-//   ];
-//   sizeText[0].textContent = card.sizes.s.size;
-//   sizeText[1].textContent = card.sizes.m.size;
-//   sizeText[2].textContent = card.sizes.l.size;
-//   nameText[0].textContent = card.additives[0].name;
-//   nameText[1].textContent = card.additives[1].name;
-//   nameText[2].textContent = card.additives[2].name;
-//   price.textContent = `$${card.price}`;
-//   firstPrice = +card.price;
-//   totalPrice = firstPrice;
-// }
-
-
-
 sizeButtons.forEach((btn, i) => {
   btn.addEventListener("click", () => {
     sizeButtons.forEach((otherBtn) => {
@@ -132,6 +101,7 @@ function closeModal(event) {
     modalWindow.style.display = "none";
     removeClasslist(additivesButtons);
     removeClasslist(sizeButtons);
+    additivesCost=0;
     sizeButtons[0].classList.add("active-btn");
     body.classList.remove("active");
   });
